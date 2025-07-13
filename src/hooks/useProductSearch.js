@@ -1,24 +1,37 @@
 import { useState, useEffect } from 'react';
 
-
 const useProductSearch = () => {
+  const [page, setPage] = useState(1);
+  const [error, setError] = useState(null);
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  // ✅ Pagination states
-  const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
-  const limit = 6; // nombre d'éléments par page
+
+  const limit = 6;
 
   const fetchProducts = async () => {
-    setLoading(true);
     try {
-      const response = await fetch(`https://api.daaif.net/products?delay=1000&page=${page}&limit=${limit}`);
-      if (!response.ok) throw new Error('Erreur réseau');
+      setLoading(true);
+      setError(null);
+
+      const skip = (page - 1) * limit;
+
+      const response = await fetch(
+          `https://api.daaif.net/products?delay=1000&skip=${skip}&limit=${limit}`
+      );
+
+      if (!response.ok) {
+        throw new Error('Erreur réseau');
+      }
+
       const data = await response.json();
-      setProducts(data.products);
-      setTotalPages(Math.ceil(data.total / limit)); // si l'API donne total
+
+      setProducts(data.products || []);
+
+      if (data.total) {
+        setTotalPages(Math.ceil(data.total / limit));
+      }
+
       setLoading(false);
     } catch (err) {
       setError(err.message);
@@ -28,30 +41,33 @@ const useProductSearch = () => {
 
   useEffect(() => {
     fetchProducts();
-  }, [page]); // dépend de page
+  }, [page]);
+
+  const nextPage = () => {
+    if (page < totalPages) {
+      setPage(page + 1);
+    }
+  };
+
+  const previousPage = () => {
+    if (page > 1) {
+      setPage(page - 1);
+    }
+  };
 
   const reload = () => {
     fetchProducts();
-  };
-
-  const nextPage = () => {
-    if (page < totalPages) setPage(page + 1);
-  };
-
-  const prevPage = () => {
-    if (page > 1) setPage(page - 1);
   };
 
   return {
     products,
     loading,
     error,
-    reload,
     page,
     totalPages,
     nextPage,
-    prevPage,
-    setPage,
+    previousPage,
+    reload,
   };
 };
 

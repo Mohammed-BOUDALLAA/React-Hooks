@@ -53,8 +53,7 @@ Pour chaque exercice :
 
 _Votre réponse pour l'exercice 1 :_
 ```
-Expliquez votre solution ici
-[Ajoutez vos captures d'écran]
+![REEL.png](../../Desktop/IDAO/REEL.png)
 ```
 
 ### Exercice 2 : Context et Internationalisation
@@ -66,8 +65,7 @@ Expliquez votre solution ici
 
 _Votre réponse pour l'exercice 2 :_
 ```
-Expliquez votre solution ici
-[Ajoutez vos captures d'écran]
+![2.png](../../Desktop/IDAO/2.png)
 ```
 
 ### Exercice 3 : Hooks Personnalisés
@@ -77,10 +75,14 @@ Expliquez votre solution ici
 - [ ] 3.2 Créer le hook useLocalStorage
 - [ ] 3.3 Documenter votre solution ici
 
-_Votre réponse pour l'exercice 3 :_
+_Réponse pour l'exercice 3 :_
+- useDebounce
 ```
-Expliquez votre solution ici
-[Ajoutez vos captures d'écran]
+![USEDEBOUCE.png](../../Desktop/IDAO/USEDEBOUCE.png)
+```
+- useLocalStorage
+```
+![USELOCALSTORAGE.png](../../Desktop/IDAO/USELOCALSTORAGE.png)
 ```
 
 ### Exercice 4 : Gestion Asynchrone et Pagination
@@ -92,8 +94,7 @@ Expliquez votre solution ici
 
 _Votre réponse pour l'exercice 4 :_
 ```
-Expliquez votre solution ici
-[Ajoutez vos captures d'écran]
+![RELOAD.png](../../Desktop/IDAO/RELOAD.png)
 ```
 
 ## Rendu

@@ -4,7 +4,6 @@ import useProductSearch from '../hooks/useProductSearch';
 
 const ProductList = ({ searchTerm }) => {
     const { isDarkTheme } = useContext(ThemeContext);
-
     const { language } = useContext(LanguageContext);
 
     const {
@@ -38,11 +37,10 @@ const ProductList = ({ searchTerm }) => {
 
     const filteredProducts = products.filter((product) => {
         return (
-            (product.title || '').toLowerCase().includes((searchTerm || '').toLowerCase()) ||
-            (product.description || '').toLowerCase().includes((searchTerm || '').toLowerCase())
+            product.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            product.description.toLowerCase().includes(searchTerm.toLowerCase())
         );
     });
-
 
     const priceLabel = language === 'fr' ? 'Prix' : 'Price';
 

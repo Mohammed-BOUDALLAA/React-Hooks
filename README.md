@@ -52,10 +52,9 @@ Pour chaque exercice :
 - [ ] 1.3 Documenter votre solution ici
 
 _Réponse pour l'exercice 1 :_
-```
-<img width="1912" height="702" alt="REEL" src="https://github.com/user-attachments/assets/56ff0f7b-93d2-4019-99ef-489117e2bf36" />
 
-```
+![REEL.png](Images/REEL.png)
+
 
 ### Exercice 2 : Context et Internationalisation
 #### Objectif : Gérer les préférences de langue
@@ -65,10 +64,9 @@ _Réponse pour l'exercice 1 :_
 - [ ] 2.3 Documenter votre solution ici
 
 _Réponse pour l'exercice 2 :_
-```
-<img width="1912" height="1021" alt="2" src="https://github.com/user-attachments/assets/405c12c1-01f5-4bc9-878b-a7fcb3748c00" />
 
-```
+![Images/2.png](Images/2.png)
+
 
 ### Exercice 3 : Hooks Personnalisés
 #### Objectif : Créer des hooks réutilisables
@@ -79,15 +77,13 @@ _Réponse pour l'exercice 2 :_
 
 _Réponse pour l'exercice 3 :_
 - useDebounce
-```
-<img width="593" height="488" alt="USEDEBOUCE" src="https://github.com/user-attachments/assets/cba9aba1-6020-4b99-bab4-6e81855dd15d" />
 
-```
+![USEDEBOUCE.png](Images/USEDEBOUCE.png)
+
 - useLocalStorage
-```
-<img width="770" height="690" alt="USELOCALSTORAGE" src="https://github.com/user-attachments/assets/4b3bc11e-0191-4fe9-b8a5-57b1e808a28e" />
 
-```
+![USELOCALSTORAGE.png](Images/USELOCALSTORAGE.png)
+
 
 ### Exercice 4 : Gestion Asynchrone et Pagination
 #### Objectif : Gérer le chargement et la pagination
@@ -97,10 +93,9 @@ _Réponse pour l'exercice 3 :_
 - [ ] 4.3 Documenter votre solution ici
 
 _Réponse pour l'exercice 4 :_
-```
-<img width="1887" height="1022" alt="RELOAD" src="https://github.com/user-attachments/assets/4ff39e1a-571b-42a5-bd13-f7a39dfcf78a" />
 
-```
+![RELOAD.png](Images/RELOAD.png)
+
 
 ## Rendu
 
